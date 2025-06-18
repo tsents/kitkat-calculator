@@ -7,7 +7,7 @@ double Calculator::calculate(double num1, char operation, double num2) {
         case '-':
             return Calculator::subtract(num1, num2);
         case '/':
-            return Calculator::devide(num1, num2);
+            return Calculator::divide(num1, num2);
         case '*':
             return Calculator::multiply(num1, num2);
     }
@@ -27,7 +27,7 @@ double Calculator::multiply(double num1, double num2) {
     return num1 * num2;
 }
 
-double Calculator::devide(double num1, double num2) {
+double Calculator::divide(double num1, double num2) {
     if (num2 == 0) {
         throw Calculator::DIV_BY_ZERO_ERROR;
     }

@@ -6,7 +6,7 @@ int main() {
     std::cout << Calculator::add(5, 5) << std::endl;
     std::cout << Calculator::subtract(5, 5) << std::endl;
     std::cout << Calculator::multiply(5, 5) << std::endl;
-    std::cout << Calculator::devide(5, 5) << std::endl;
+    std::cout << Calculator::divide(5, 5) << std::endl;
     
     std::cout << Calculator::calculate(5, '/', 5) << std::endl;
     std::cout << Calculator::calculate(5, '*', 5) << std::endl;

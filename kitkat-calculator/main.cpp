@@ -1,4 +1,5 @@
 #include "calculator.h"
+#include "calculator_exceptions.h"
 #include <iostream>
 
 int main() {
@@ -12,17 +13,15 @@ int main() {
     std::cout << Calculator::calculate(5, '*', 5) << std::endl;
     std::cout << Calculator::calculate(5, '-', 5) << std::endl;
 
-    //try {
-    //    std::cout << Calculator::calculate(5, '&', 5) << std::endl;
-    //} catch () {
-    //    if (error == Calculator::UNKOWN_OPERATION_ERROR) {
-    //        std::cout << "Caught unkown operation error" << std::endl;
-    //    }
-    //}
+    try {
+        std::cout << Calculator::calculate(5, '&', 5) << std::endl;
+    } catch (const OperationException& error) {
+        std::cout << error.what() << std::endl;
+    }
 
     try {
         std::cout << Calculator::calculate(5, '/', 0) << std::endl;
-    } catch (DivisionException error) {
+    } catch (const DivisionException& error) {
         std::cerr << error.what() << std::endl;
     }
 }

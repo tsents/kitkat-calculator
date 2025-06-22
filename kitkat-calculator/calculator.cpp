@@ -1,4 +1,5 @@
 #include "calculator.h"
+#include "calculator_exceptions.h"
 
 double Calculator::add(double num1, double num2) {
     return num1 + num2;
@@ -30,5 +31,5 @@ double Calculator::calculate(double num1, char operation, double num2) {
     case '*':
         return Calculator::multiply(num1, num2);
     }
-    throw 0; // TODO;
+    throw OperationException(operation);
 }

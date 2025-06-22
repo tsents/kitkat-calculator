@@ -1,5 +1,5 @@
 #pragma once
-#include "division_exception.h"
+#include "calculator_exceptions.h"
 
 class Calculator {
 

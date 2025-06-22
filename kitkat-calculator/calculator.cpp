@@ -30,6 +30,7 @@ double Calculator::calculate(double num1, char operation, double num2) {
         return Calculator::divide(num1, num2);
     case '*':
         return Calculator::multiply(num1, num2);
+    default:
+        throw OperationException(operation);
     }
-    throw OperationException(operation);
 }
